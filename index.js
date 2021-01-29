@@ -33,12 +33,12 @@ let mins = 0
 let level = document.getElementById('level')
 level.style.color = "green"
 level.style.position = "absolute"
-level.style.left = "290px"
+level.style.left = "270px"
 level.style.top = '2px'
 let levelcount = document.getElementById('levelcount')
 levelcount.style.color = "green"
 levelcount.style.position = "absolute"
-levelcount.style.left = "335px"
+levelcount.style.left = "320px"
 levelcount.style.top = '3px'
 let scorecount = 1
 function scorecounts () {
