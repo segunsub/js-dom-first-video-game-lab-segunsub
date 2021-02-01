@@ -2,15 +2,17 @@ function BoxGame () {
 let square = document.getElementById("square");
 let div = document.createElement('div')
 let div1 = document.createElement('div')
-let button1 = document.createElement('button')
-let button2 = document.createElement('button')
-let button3 = document.createElement('button')
-let button4 = document.createElement('button')
-document.body.append(button1,button2,button3,button4,div,div1)
-button1.innerText = "Increase Speed"
-button2.innerText = "Decrease Speed"
-button3.innerText = "Generate Opponent"
-button4.innerText = "Nokia 3310"
+let IncreaseSpeed = document.createElement('button')
+let DecreaseSpeed = document.createElement('button')
+let GenerateOpponent = document.createElement('button')
+let Gothrough = document.createElement('button')
+let Nokia3310 = document.createElement('a')
+document.body.append(IncreaseSpeed,DecreaseSpeed,GenerateOpponent,Gothrough,Nokia3310,div,div1)
+IncreaseSpeed.innerText = "Increase Speed"
+DecreaseSpeed.innerText = "Decrease Speed"
+GenerateOpponent.innerText = "Generate Opponent"
+Gothrough.innerText = "Gothrough"
+
 let game = document.getElementById("game")
 let opp = document.createElement('div')
 game.append(opp)
@@ -50,17 +52,17 @@ function counttime () {
 count.innerText = mins
 let timer2 = setInterval( counttime, 1000)
   let rpx = 200,lpx = 150,button = 10
-    button1.addEventListener("click", () => {
+    IncreaseSpeed.addEventListener("click", () => {
        if(button < 70)button += 5
     })
     function color() {
       let colors = Math.floor(Math.random()*16777215).toString(16)
       square.style.backgroundColor = `#${colors}`
     }
-    button2.addEventListener("click", () => {
+    DecreaseSpeed.addEventListener("click", () => {
        if(button >= 10)button -= 5
     })
-    button4.addEventListener("click", () => {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+    Gothrough.addEventListener("click", () => {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
       document.addEventListener("keydown", function(e) {
         if (e.key === 'ArrowDown') {
             if(rpx < 300) {
@@ -103,7 +105,7 @@ let timer2 = setInterval( counttime, 1000)
      opp.style.top = `${top}px`
      opp.style.left = `${left}px`
    }
-   button3.addEventListener("click", function(e) {
+   GenerateOpponent.addEventListener("click", function(e) {
         rand()
     opp.style.backgroundColor = "white"
   })
@@ -131,13 +133,18 @@ let timer2 = setInterval( counttime, 1000)
    color()
   })
   function nokia() {
-  div1.innerText = "Nokia3310"
+  div1.innerText = "Gothrough"
   let gif = document.createElement("img")
   div1.append(gif)
   gif.src = "https://art.pixilart.com/16c3630a9147a08.gif"
   gif.style.width = "200px"
   }
   setTimeout(nokia, 5000)
+  ref = document.createElement('button')
+  Nokia3310.append(ref)
+  ref.innerText = "Nokia 3310"
+  Nokia3310.addEventListener("click", () => {  
+    Nokia3310.href = "nokia.html"
+    }) 
 }
 BoxGame()
-

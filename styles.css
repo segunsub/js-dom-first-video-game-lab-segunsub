@@ -4,7 +4,15 @@
   position: absolute;
   width: 50px;
 }
+#snakeboard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: yellowgreen;
+  border: black;
 
+}
 #game {
   background-color: #111;
   height: 350px;
